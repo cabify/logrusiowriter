@@ -1,0 +1,18 @@
+language: go
+
+go:
+  - "1.11.x"
+  - "1.12.x"
+
+env:
+  - GO111MODULE=on
+
+install:
+  - make install
+
+script:
+  - make test
+  - make check-fmt
+
+after_success:
+  - make report-coveralls
