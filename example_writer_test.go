@@ -16,5 +16,5 @@ func ExampleNew() {
 	log.Printf("Standard log")
 
 	// Output:
-	// level=info msg="Standard log\n"
+	// level=info msg="Standard log"
 }

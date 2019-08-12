@@ -79,6 +79,18 @@ func ExampleWithConfigInterface() {
 	// level=trace msg="Hello World!" config=interface
 }
 
+func ExampleWithNewLineTrimming() {
+	removeTimestampAndSetOutputToStdout(logrus.StandardLogger())
+
+	writer := logrusiowriter.New(
+		logrusiowriter.WithTrailingNewLineTrimming(true),
+	)
+
+	_, _ = fmt.Fprint(writer, "Hello World!\n")
+	// Output:
+	// level=info msg="Hello World!"
+}
+
 type configProvider struct{}
 
 func (configProvider) Level() logrus.Level { return logrus.TraceLevel }
