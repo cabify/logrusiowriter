@@ -5,8 +5,17 @@ import "github.com/sirupsen/logrus"
 // Config holds the configuration to be used with WithConfig() configurer
 // This struct is useful to embed into configuration structs parsed with libraries like envconfig
 type Config struct {
-	Level  string        `default:"info"`
-	Fields logrus.Fields `default:"logger:stdlib"`
+	Level                   string        `default:"info"`
+	Fields                  logrus.Fields `default:"logger:stdlib"`
+	TrailingNewLineTrimming bool          `default:"true"`
+}
+
+// WithTrailingNewLineTrimming configures trailing newline trimming. This is true by default, because
+// log.Print adds a newline in the end of its messages, which does not make sense inside of a logrus log
+func WithTrailingNewLineTrimming(trim bool) Configurer {
+	return func(w *writer) {
+		w.trailingNewLineTrimming = trim
+	}
 }
 
 // WithLogger configures the logger with the one provided

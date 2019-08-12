@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2019-08-12
+### Added
+- Trailing newline character `\n` trimming enabled by default
+
 ## [1.0.0] - 2019-08-09
 ### Changes
 -  Initial version
