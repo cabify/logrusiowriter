@@ -4,6 +4,7 @@
 [![Travis CI build status](https://travis-ci.com/cabify/logrusiowriter.svg?branch=master)](https://travis-ci.com/cabify/logrusiowriter)
 [![GoDoc](https://godoc.org/github.com/cabify/logrusiowriter?status.svg)](https://godoc.org/github.com/cabify/logrusiowriter)
 [![Coverage Status](https://coveralls.io/repos/github/cabify/logrusiowriter/badge.svg?branch=master)](https://coveralls.io/github/cabify/logrusiowriter?branch=master)
+[![Mentioned in Awesome Go](https://awesome.re/mentioned-badge.svg)](https://github.com/avelino/awesome-go)  
 
 # Motivation
 
