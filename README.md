@@ -22,3 +22,13 @@ that uses `logrus` as output, i.e.:
 ```
 
 See `example_*_test.go` files to find testable examples that serve as documentation.
+
+# Simple solution
+
+Or... you can simply use the standard APIs that logrus provides, i.e., this does the same as this package:
+
+```go
+    log.SetOutput(logrus.WithFields(logrus.Fields{"logger": "stdlib"}).WriterLevel(logrus.InfoLevel))
+```
+
+So, unless you want this to be configurable using an envconfig-filled struct, there's no reason to use this library.
